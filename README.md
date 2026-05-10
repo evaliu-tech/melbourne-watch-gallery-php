@@ -1,6 +1,6 @@
 # Melbourne Watch Gallery PHP
 
-A PHP and MySQL e-commerce website for browsing smart watches and managing product information.
+A PHP and MySQL e-commerce website for smart watches with admin login and product management.
 
 ![Home Page](assets/screenshots/home.png)
 
