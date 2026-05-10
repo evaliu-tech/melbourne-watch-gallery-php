@@ -62,7 +62,7 @@ This project was created to demonstrate front-end and back-end web development s
 
 ### Product Page
 
-![Home Page](assets/screenshots/product.png)
+![Product Page](assets/screenshots/product.png)
 
 ### About Us Page
 
@@ -87,6 +87,10 @@ This project was created to demonstrate front-end and back-end web development s
 ### Delete Product Page
 
 ![Delete Product Page](assets/screenshots/deleteproduct.png)
+
+### Preview Product Page
+
+![Preview Product Page](assets/screenshots/preview.png)
 
 ---
 
