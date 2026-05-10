@@ -1,0 +1,797 @@
+/* Website Style Setting */
+/* Used by all pages */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+/* Used by all pages */
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  background:#f5f5f7;
+  color:#1d1d1f;
+}
+/* Navbar */
+/* Used by navbar.php */
+.navbar{
+  background:rgba(255,255,255,0.85);
+  backdrop-filter:blur(20px);
+  border-bottom:1px solid #e5e5e5;
+  padding:2px 14px;
+}
+/* Used by navbar.php */
+.navbar-brand,
+.navbar-brand h5{
+  font-size:15px;
+  font-weight:700;
+}
+/* Used by navbar.php */
+.navbar-nav .nav-link,
+.nav-link,
+.nav-link h5,
+.navbar-text{
+  font-size:12px;
+  font-weight:500;
+}
+/* Used by navbar.php */
+.navbar-nav .nav-link:hover,
+.nav-link:hover{
+  color:#0071e3;
+}
+/* Used by navbar.php */
+.navbar .container-fluid{
+  padding-left:10px;
+  padding-right:10px;
+}
+/* Used by navbar.php search input */
+.navbar .form-control{
+  font-size:12px;
+  height:38px;
+}
+/* Used by navbar.php search button */
+.navbar .btn{
+  font-size:14px;
+  height:38px;
+  padding:0 16px;
+}
+/* Header */
+/* Used by home.php, about.php, login.php, product.php, management.php, addproduct.php, editproduct.php, deleteproduct.php */
+.header{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:16px;
+  padding:14px 20px;
+  background-color:#000;
+  border-bottom:1px solid #222;
+  position:relative;
+}
+/* Used by header gold line */
+.header::after{
+  content:"";
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform:translateX(-50%);
+  width:120px;
+  height:2px;
+  background:linear-gradient(to right,#c6a15b,#e6c97a);
+}
+/* Used by header hover effect */
+.header:hover{
+  background-color:#0a0a0a;
+  transition:0.3s ease;
+}
+/* Used by header logo */
+.logo{
+  width:48px;
+  height:auto;
+  filter:brightness(1.2);
+}
+/* Used by header title */
+.site-title{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  font-size:clamp(24px,2.2vw,34px);
+  font-weight:700;
+  letter-spacing:1px;
+  color:white;
+  margin:0;
+}
+/* Used by header title hover */
+.site-title:hover{
+  color:#e6c97a;
+}
+/* Main layout */
+/* Used by home.php and product.php */
+.main_container{
+  display:grid;
+  grid-template-columns:1fr 240px;
+  gap:18px;
+  max-width:1600px;
+  margin:0 auto;
+  padding:16px 20px;
+}
+/* Product grid */
+/* Used by home.php */
+.product_container{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+}
+/* Product card */
+/* Used by home.php */
+.product{
+  background:#fff;
+  border:none;
+  border-radius:22px;
+  padding:16px;
+  height:270px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  box-shadow:0 6px 24px rgba(0,0,0,0.08);
+  transition:transform 0.25s ease,box-shadow 0.25s ease;
+}
+/* Used by home.php product card hover */
+.product:hover{
+  transform:translateY(-6px);
+  box-shadow:0 18px 45px rgba(0,0,0,0.14);
+}
+/* Used by home.php product link */
+.product a{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-decoration:none;
+  color:#1d1d1f;
+  flex:1;
+}
+/* Used by home.php product name */
+.product h2{
+  width:100%;
+  font-size:clamp(15px,1vw,20px);
+  font-weight:700;
+  line-height:1.2;
+  min-height:42px;
+  margin-bottom:8px;
+}
+/* Used by home.php product image */
+.product img{
+  width:clamp(110px,12vw,150px);
+  height:clamp(110px,12vw,150px);
+  object-fit:contain;
+  display:block;
+  margin:auto;
+}
+/* Product price and button */
+/* Used by home.php */
+.product_info{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-top:10px;
+}
+/* Used by home.php product price */
+.product_info h2{
+  min-height:auto;
+  font-size:clamp(14px,0.9vw,18px);
+  margin:0;
+}
+/* Used by home.php price label */
+.product_info h2::before{
+  content:"From ";
+}
+/* Used by home.php Add to cart button */
+.product_info button{
+  background:#0071e3;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  padding:7px 16px;
+  font-size:13px;
+  font-weight:500;
+  min-width:100px;
+  height:36px;
+  white-space:nowrap;
+}
+/* Used by home.php Add to cart button hover */
+.product_info button:hover{
+  background:#0077ed;
+}
+/* Shopping Cart */
+/* Used by home.php and product.php */
+.shopping_cart{
+  background:#fff;
+  border:none;
+  border-radius:24px;
+  padding:18px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+  height:fit-content;
+  position:sticky;
+  top:70px;
+}
+/* Used by shopping cart item image */
+.shopping_cart img{
+  width:55px;
+  height:55px;
+  object-fit:contain;
+  border-radius:10px;
+  background:#f5f5f7;
+  padding:4px;
+}
+/* Used by shopping cart title */
+.cart_title{
+  text-align:center;
+  margin-bottom:14px;
+}
+/* Used by shopping cart title text */
+.cart_title h2{
+  font-size:18px;
+  font-weight:700;
+}
+/* Used by shopping cart total text */
+.total_row h2{
+  font-size:18px;
+}
+/* Used by project.js shopping cart item */
+.cart_item{
+  display:grid;
+  grid-template-columns:60px 1fr auto;
+  align-items:start;
+  gap:10px;
+  padding:12px 0;
+  border-bottom:1px solid #eee;
+}
+/* Used by project.js shopping cart item text */
+.cart_item h2{
+  font-size:11px;
+  font-weight:600;
+  line-height:1.3;
+  margin:0;
+}
+/* Used by project.js Remove button */
+.cart_item button{
+  background:#6e6e73;
+  border:none;
+  border-radius:999px;
+  color:white;
+  font-size:10px;
+  font-weight:500;
+  width:54px;
+  height:24px;
+  padding:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-top:6px;
+}
+/* Used by project.js Remove button hover */
+.cart_item button:hover{
+  background:#4f4f53;
+}
+/* Used by shopping cart total row */
+.total_row{
+  display:flex;
+  justify-content:space-between;
+  margin:20px 0;
+}
+/* Used by shopping cart checkout button */
+.shopping_cart button{
+  width:100%;
+  background:#0071e3;
+  border:none;
+  border-radius:999px;
+  font-size:13px;
+  padding:8px 14px;
+  height:40px;
+}
+/* Responsive */
+/* Used by home.php and product.php */
+@media screen and (max-width:1200px){
+  .main_container{
+    grid-template-columns:1fr;
+  }
+  .shopping_cart{
+    position:static;
+  }
+  .product_container{
+    grid-template-columns:repeat(3,1fr);
+  }
+}
+/* Used by home.php product grid */
+@media screen and (max-width:900px){
+  .product_container{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+/* Used by home.php mobile layout */
+@media screen and (max-width:650px){
+  .product_container{
+    grid-template-columns:1fr;
+  }
+  .product{
+    height:auto;
+  }
+  .site-title{
+    font-size:28px;
+  }
+}
+/* About Us Page */
+/* Used by about.php */
+.about-section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:30px 40px;
+  background:#fff;
+}
+/* Used by about.php title */
+.about-section h1{
+  font-size:26px;
+  font-weight:700;
+  margin-bottom:18px;
+  color:#111;
+}
+/* Used by about.php intro paragraph */
+.about-intro{
+  font-size:15px;
+  line-height:1.5;
+  font-weight:500;
+  margin-bottom:22px;
+  color:#111;
+}
+/* Used by about.php content layout */
+.about-content{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+  align-items:start;
+}
+/* Used by about.php text */
+.about-text p{
+  font-size:13px;
+  line-height:1.6;
+  margin-bottom:16px;
+  color:#111;
+}
+/* Used by about.php image */
+.about-image img{
+  width:100%;
+  max-height:340px;
+  object-fit:cover;
+  border-radius:16px;
+  background:#f5f5f7;
+  padding:6px;
+}
+/* Used by about.php mobile layout */
+@media screen and (max-width:768px){
+  .about-section{
+    padding:35px 22px;
+  }
+  .about-section h1{
+    font-size:34px;
+  }
+  .about-intro{
+    font-size:19px;
+  }
+  .about-content{
+    grid-template-columns:1fr;
+  }
+}
+/* Login Page */
+/* Used by login.php */
+.login-container{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+  background:#f5f5f7;
+}
+/* Used by login.php form card */
+.login{
+  width:100%;
+  max-width:500px;
+  background:white;
+  padding:40px;
+  border-radius:24px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+/* Used by login.php title */
+.login-title{
+  text-align:center;
+  font-size:32px;
+  font-weight:700;
+  margin-bottom:28px;
+  color:#1d1d1f;
+}
+/* Used by login.php labels */
+.form-label{
+  font-size:16px;
+  font-weight:600;
+  margin-bottom:8px;
+  color:#1d1d1f;
+}
+/* Used by login.php inputs */
+.form-control{
+  height:54px;
+  font-size:18px;
+  border-radius:16px;
+  border:1px solid #d2d2d7;
+  background:#fbfbfd;
+  padding-left:18px;
+  color:#1d1d1f;
+}
+/* Used by login.php placeholder */
+.form-control::placeholder{
+  font-size:16px;
+}
+/* Used by login.php input focus */
+.form-control:focus{
+  border-color:#0071e3;
+  box-shadow:0 0 0 4px rgba(0,113,227,0.15);
+}
+/* Used by login.php login button */
+.login button{
+  width:100%;
+  height:54px;
+  border-radius:999px;
+  border:none;
+  background:#0071e3;
+  font-size:18px;
+  font-weight:600;
+  margin-top:10px;
+}
+/* Used by login.php login button hover */
+.login button:hover{
+  background:#0077ed;
+}
+/* Product Detail Page */
+/* Used by product.php */
+.product_detail_container{
+  display:grid;
+  grid-template-columns:0.8fr 1.1fr;
+  gap:18px;
+}
+/* Used by product.php detail cards */
+.product_detail_image,
+.product_detail_info{
+  background:#fff;
+  border-radius:22px;
+  padding:20px;
+  box-shadow:0 8px 28px rgba(0,0,0,0.08);
+}
+/* Used by product.php main image */
+.main_image{
+  width:100%;
+  height:260px;
+  object-fit:contain;
+  display:block;
+  margin:0 auto;
+}
+/* Used by product.php thumbnail layout */
+.thumbnail_images{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-top:14px;
+}
+/* Used by product.php thumbnail images */
+.thumbnail_images img{
+  width:56px;
+  height:56px;
+  object-fit:contain;
+  border:1px solid #d2d2d7;
+  border-radius:12px;
+  padding:4px;
+  background:#f5f5f7;
+  cursor:pointer;
+}
+/* Used by product.php thumbnail hover */
+.thumbnail_images img:hover{
+  border-color:#0071e3;
+  transform:scale(1.05);
+}
+/* Used by product.php product name */
+.product_detail_info h2{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+/* Used by product.php model number */
+.product_detail_info h3{
+  font-size:14px;
+  font-weight:500;
+  color:#555;
+  margin-bottom:12px;
+}
+/* Used by product.php product price */
+.product_price{
+  font-size:22px;
+  font-weight:700;
+  margin-bottom:16px;
+}
+/* Used by product.php Add to cart button */
+.product_detail_info button{
+  background:#0071e3;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  padding:8px 20px;
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:18px;
+  min-width:130px;
+  height:42px;
+}
+/* Used by product.php Add to cart button hover */
+.product_detail_info button:hover{
+  background:#0077ed;
+  color:#fff;
+  transform:translateY(-2px);
+}
+/* Used by product.php Product Overview title */
+.product_overview{
+  font-size:18px;
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid #eee;
+}
+/* Used by product.php product description */
+.product_detail_info p{
+  font-size:14px;
+  line-height:1.6;
+  margin-bottom:8px;
+  color:#333;
+}
+/* Used by product.php mobile layout */
+@media screen and (max-width:900px){
+  .product_detail_container{
+    grid-template-columns:1fr;
+  }
+  .main_image{
+    height:300px;
+  }
+}
+/* Product Management Page */
+/* Used by management.php */
+.management-section{
+  max-width:1450px;
+  margin:0 auto;
+  padding:18px 28px;
+}
+/* Used by management.php title */
+.management-title{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Arial,sans-serif;
+  text-align:center;
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:14px;
+  color:#111;
+}
+/* Used by management.php table wrapper */
+.management-table-wrapper{
+  background:#fff;
+  border-radius:22px;
+  padding:14px;
+  box-shadow:0 8px 28px rgba(0,0,0,0.08);
+  overflow-x:auto;
+}
+/* Used by management.php table */
+.management-table{
+  margin-bottom:0;
+}
+/* Used by management.php product image */
+.management-table img{
+  width:48px;
+  height:48px;
+  max-width:48px;
+  max-height:48px;
+  object-fit:contain;
+  display:block;
+}
+/* Used by management.php table header */
+.management-table thead th{
+  font-family:"Inter",sans-serif;
+  font-size:13px;
+  font-weight:700;
+  white-space:nowrap;
+  letter-spacing:0.7px;
+  text-transform:uppercase;
+  color:#555;
+  padding:14px 12px;
+  border-bottom:1px solid #ddd;
+}
+/* Used by management.php table body */
+.management-table tbody td,
+.management-table tbody th{
+  font-family:"Inter",sans-serif;
+  font-size:14px;
+  font-weight:500;
+  padding:10px 10px;
+  vertical-align:middle;
+}
+/* Used by management.php table row hover */
+.management-table tbody tr:hover{
+  background:#f8f8fa;
+}
+/* Used by management.php product image class */
+.management-product-img{
+  width:42px;
+  height:42px;
+  max-width:48px;
+  max-height:48px;
+  object-fit:contain;
+  background:#f5f5f7;
+  border-radius:10px;
+  padding:4px;
+  display:block;
+}
+/* Used by management.php action buttons wrapper */
+.management-actions{
+  display:flex;
+  gap:6px;
+  flex-wrap:wrap;
+}
+/* Used by management.php Edit/Delete/Preview buttons */
+.management-actions a{
+  font-family:"Inter",sans-serif;
+  background:#111;
+  color:#fff;
+  text-decoration:none;
+  border-radius:999px;
+  padding:5px 12px;
+  font-size:12px;
+  font-weight:600;
+}
+/* Used by management.php action button hover */
+.management-actions a:hover{
+  background:#333;
+  color:#fff;
+}
+/* Add/Edit Product Form Page */
+/* Used by addproduct.php and editproduct.php */
+.product-form-section{
+  max-width:1200px;
+  margin:0 auto;
+  padding:6px 20px 12px;
+}
+/* Used by addproduct.php and editproduct.php form title */
+.product-form-title{
+  text-align:center;
+  font-size:26px;
+  font-weight:700;
+  letter-spacing:1px;
+  margin-bottom:10px;
+  color:#111;
+}
+/* Used by addproduct.php and editproduct.php form card */
+.product-form{
+  background:#fff;
+  border-radius:18px;
+  padding:12px 24px;
+  box-shadow:0 8px 28px rgba(0,0,0,0.08);
+}
+/* Used by addproduct.php and editproduct.php submit button */
+.product-form-btn{
+  width:180px;
+  height:32px;
+  background:#111;
+  color:#fff;
+  border:none;
+  border-radius:999px;
+  font-size:12px;
+  font-weight:600;
+  margin:8px auto 0;
+  display:block;
+}
+/* Used by addproduct.php and editproduct.php submit button hover */
+.product-form-btn:hover{
+  background:#333;
+  color:#fff;
+}
+/* Used by addproduct.php and editproduct.php form rows */
+.product-form-row{
+  margin-bottom:4px;
+}
+/* Used by addproduct.php and editproduct.php form labels */
+.product-form-row .form-label{
+  display:block;
+  font-size:12px;
+  font-weight:600;
+  margin-bottom:1px;
+  color:#1d1d1f;
+}
+/* Used by addproduct.php and editproduct.php form inputs */
+.product-form-row .form-control{
+  height:30px;
+  font-size:12px;
+  border-radius:9px;
+  border:1px solid #d2d2d7;
+  background:#fbfbfd;
+  padding:3px 12px;
+}
+/* Used by addproduct.php and editproduct.php overview textarea */
+.product-form-row textarea.form-control{
+  height:44px;
+  resize:vertical;
+}
+/* Delete Product Page */
+/* Used by deleteproduct.php */
+.delete-section{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:40px 20px;
+}
+/* Used by deleteproduct.php delete card */
+.delete-card{
+  width:100%;
+  max-width:520px;
+  background:#fff;
+  border-radius:22px;
+  padding:32px;
+  text-align:center;
+  box-shadow:0 8px 28px rgba(0,0,0,0.08);
+}
+/* Used by deleteproduct.php title */
+.delete-card h1{
+  font-size:30px;
+  font-weight:700;
+  margin-bottom:12px;
+}
+/* Used by deleteproduct.php warning text */
+.delete-card p{
+  font-size:16px;
+  color:#555;
+  margin-bottom:20px;
+}
+/* Used by deleteproduct.php product image */
+.delete-card img{
+  width:90px;
+  height:90px;
+  object-fit:contain;
+  background:#f5f5f7;
+  border-radius:14px;
+  padding:8px;
+  margin-bottom:16px;
+}
+/* Used by deleteproduct.php product name */
+.delete-card h2{
+  font-size:18px;
+  font-weight:600;
+  margin-bottom:24px;
+}
+/* Used by deleteproduct.php action area */
+.delete-actions{
+  display:flex;
+  gap:12px;
+}
+/* Used by deleteproduct.php delete and cancel buttons */
+.delete-actions a{
+  flex:1;
+  text-decoration:none;
+  border-radius:999px;
+  padding:10px 16px;
+  font-size:14px;
+  font-weight:600;
+}
+/* Used by deleteproduct.php delete button */
+.delete-btn{
+  background:#d70015;
+  color:#fff;
+}
+/* Used by deleteproduct.php delete button hover */
+.delete-btn:hover{
+  background:#b00012;
+  color:#fff;
+}
+/* Used by deleteproduct.php cancel button */
+.cancel-btn{
+  background:#111;
+  color:#fff;
+}
+/* Used by deleteproduct.php cancel button hover */
+.cancel-btn:hover{
+  background:#333;
+  color:#fff;
+}
