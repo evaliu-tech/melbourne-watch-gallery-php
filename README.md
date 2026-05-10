@@ -60,6 +60,10 @@ This project was created to demonstrate front-end and back-end web development s
 
 ![Home Page](assets/screenshots/home.png)
 
+### Product Page
+
+![Home Page](assets/screenshots/product.png)
+
 ### About Us Page
 
 ![About Us Page](assets/screenshots/aboutus.png)
