@@ -178,7 +178,7 @@ password
 ## Project Structure
 
 ```text
-PHP_DB_P_Version/
+melbourne-watch-gallery-php/
 │
 ├── README.md
 │
@@ -235,7 +235,7 @@ git clone https://github.com/evaliu-tech/melbourne-watch-gallery-php.git
 Example:
 
 ```text
-C:\xampp\htdocs\PHP_DB_P_Version
+C:\xampp\htdocs\melbourne-watch-gallery-php
 ```
 
 ### 3. Start XAMPP
@@ -295,7 +295,7 @@ Example connection:
 ### 6. Open the project in browser
 
 ```text
-http://localhost/PHP_DB_P_Version/php/home.php
+http://localhost/melbourne-watch-gallery-php/php/home.php
 ```
 
 ---
